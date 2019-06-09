@@ -1,48 +1,48 @@
 $(function() {
   $('#js-shopping-list-form').submit(event => {
      event.preventDefault();
-     //$(".js-shopping-list-entry").empty();
+    //  $(".js-shopping-list-entry").empty();
  
      const item = $(this).find(
       'input[name="shopping-list-entry"]').val();
  
-    const buttonDiv = $(this).find(
-      ".shopping-item-controls").html();
-      $("ul").append(
-        `<li> 
-        <span class=\"shopping-item\">
-        <span class = "shopping-item">${item}</span>
-        <div class=\"shopping-item-controls\">
-        <div class = "shopping-item-controls">
-        <button>
-        <span class="button-label">check</span>
-        </button>
-        <button class="shopping-item-delete">
-        <span class="button-label">delete</span>
-        </button>
-        </div>
-        </li>`
-      )
+    // const buttonDiv = $(this).find(
+    //   ".shopping-item-controls").html();
+    //   $("ul").append(
+    //     `<li> 
+    //     <span class=\"shopping-item\">
+    //     <span class = "shopping-item">${item}</span>
+    //     <div class=\"shopping-item-controls\">
+    //     <div class = "shopping-item-controls">
+    //     <button>
+    //     <span class="button-label">check</span>
+    //     </button>
+    //     <button class="shopping-item-delete">
+    //     <span class="button-label">delete</span>
+    //     </button>
+    //     </div>
+    //     </li>`
+    //   )
 
 
-    // $("ul").append(
-    //   "<li>" +
-    //   //"<span class=\"shopping-item\">"+
-    //   '<span class = "shopping-item">' +
-    //   [item] +
-    //   "</span>" +
-    //   //"<div class=\"shopping-item-controls\">"+
-    //   '<div class = "shopping-item-controls">'+
-    //   //[buttonDiv] +
-    //   '[buttonDiv]' +
-    //   '<span class="button-label">check</span>' +
-    //   '</button>' +
-    //   '<button class="shopping-item-delete">' +
-    //   '<span class="button-label">delete</span>' +
-    //   '</button>' +
-    //   "</div>" +
-    //   "</li>");
- 
+    $("ul").append(
+      "<li>" +
+      //"<span class=\"shopping-item\">"+
+      '<span class = "shopping-item">' +
+      [item] +
+      "</span>" +
+      //"<div class=\"shopping-item-controls\">"+
+      '<div class = "shopping-item-controls">'+
+      //[buttonDiv] +
+      '<button class="shopping-item-toggle">' +
+      '<span class="button-label">check</span>' +
+      '</button>' +
+      '<button class="shopping-item-delete">' +
+      '<span class="button-label">delete</span>' +
+      '</button>' +
+      "</div>" +
+      "</li>");
+      
      $(".js-shopping-list-entry").val('');
  
   });
